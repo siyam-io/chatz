@@ -1,34 +1,40 @@
-# 💬 Chat-Z
+# Chat-Z
 
-Welcome to **Chat-Z**, a comprehensive, real-time messaging ecosystem. This project features a robust mobile application, a scalable PostgreSQL backend, and a dedicated Next.js administrative dashboard. 
+Chat-Z is a comprehensive, real-time messaging ecosystem designed for seamless communication. The project consists of a robust React Native mobile application, a scalable Node.js & PostgreSQL backend, and a feature-rich Next.js administrative dashboard.
 
-![Chat-Z Banner](https://via.placeholder.com/1200x300.png?text=Chat-Z+-+Real-Time+Messaging+Ecosystem)
+## 🔗 Live Links
 
-## 🌟 Features
+- **Admin Panel:** [https://chatz-iota-mocha.vercel.app/](https://chatz-iota-mocha.vercel.app/)
+- **Backend API (Production):** [https://chaz-backend.onrender.com](https://chaz-backend.onrender.com)
+- **Repository:** [https://github.com/siyam-io/chatz](https://github.com/siyam-io/chatz)
 
-- **Real-Time Messaging**: Lightning-fast socket-based communication.
-- **Mobile First**: Built with React Native & Expo for cross-platform (iOS/Android) mobile capabilities.
-- **Secure Backend**: Express & Node.js API with PostgreSQL and structured schemas.
-- **Admin Dashboard**: A sleek, feature-rich Next.js dashboard to manage users, data, and configurations.
-- **Scalable Architecture**: Well-separated components ensuring maintainability and ease of scaling.
+---
+
+## 🌟 Key Features
+
+- **Real-Time Messaging**: Lightning-fast socket-based communication ensuring low latency.
+- **Cross-Platform Mobile App**: Built with React Native and Expo for both iOS and Android.
+- **Robust Backend**: Node.js API with PostgreSQL for structured and secure data persistence.
+- **Administrative Dashboard**: A modern Next.js interface for user management, analytics, and platform configuration.
+- **Scalable Architecture**: Decoupled monolithic components for maintainability and horizontal scalability.
 
 ---
 
 ## 🏗 Project Architecture
 
-The project is divided into three main components:
+The repository is structured into three primary components:
 
-### 1. 📱 ChatApp (Mobile App)
-- **Tech Stack**: React Native, Expo
-- **Description**: The core user-facing mobile application where users can communicate seamlessly.
+### 1. Mobile Application (`ChatApp`)
+- **Framework**: React Native, Expo
+- **Purpose**: The core user-facing client application designed for real-time chat interactions.
 
-### 2. ⚙️ Backend (`backend-pg`)
-- **Tech Stack**: Node.js, Express, PostgreSQL, Socket.io
-- **Description**: The engine of Chat-Z. It handles real-time socket connections, RESTful APIs, data persistence, and core business logic.
+### 2. Backend Engine (`backend-pg`)
+- **Framework**: Node.js, Express, PostgreSQL, Socket.io
+- **Purpose**: Handles authentication, RESTful routing, real-time socket events, and database migrations.
 
-### 3. 🛡 Admin (`admin`)
-- **Tech Stack**: Next.js, React
-- **Description**: The administrative interface for managing the platform, users, and monitoring activities.
+### 3. Administrative Dashboard (`admin`)
+- **Framework**: Next.js (React), Tailwind CSS
+- **Purpose**: A secure web interface for platform administrators to monitor and manage the ecosystem.
 
 ---
 
@@ -36,64 +42,68 @@ The project is divided into three main components:
 
 ### Prerequisites
 
-- Node.js (v18 or higher)
-- PostgreSQL
-- Expo CLI
+Ensure you have the following installed on your local development environment:
+- **Node.js** (v18.x or higher recommended)
+- **PostgreSQL** (v14 or higher)
+- **Expo CLI** (for mobile app development)
 
-### Installation
+### Local Development Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/chat-z.git
-   cd chat-z
-   ```
+#### 1. Repository Setup
+```bash
+git clone https://github.com/siyam-io/chatz.git
+cd chatz
+```
 
-2. **Backend Setup:**
-   ```bash
-   cd backend-pg
-   npm install
-   # Copy .env.example to .env and configure your PostgreSQL database
-   cp .env.example .env
-   # Run migrations
-   npm run db:migrate
-   # Start the server
-   npm run dev
-   ```
+#### 2. Backend Initialization
+```bash
+cd backend-pg
+npm install
 
-3. **Mobile App Setup:**
-   ```bash
-   cd ../ChatApp
-   npm install
-   # Start the Expo server
-   npx expo start
-   ```
+# Environment configuration
+cp .env.example .env
+# Update the .env file with your local PostgreSQL credentials
 
-4. **Admin Dashboard Setup:**
-   ```bash
-   cd ../admin
-   npm install
-   # Start the development server
-   npm run dev
-   ```
+# Execute database migrations
+npm run db:migrate
+
+# Start the development server (runs on port 5001 or 5002)
+npm run dev
+```
+
+#### 3. Mobile Application Initialization
+```bash
+cd ../ChatApp
+npm install
+
+# Start the Expo development server
+npx expo start
+```
+
+#### 4. Admin Dashboard Initialization
+```bash
+cd ../admin
+npm install
+
+# Configure environment variables
+cp .env.example .env.local
+# Update NEXT_PUBLIC_API_URL if needed
+
+# Start the Next.js development server
+npm run dev
+```
 
 ---
 
-## 🔒 Environment Variables
+## 🛠 Technology Stack
 
-Make sure to create `.env` files in their respective directories (`backend-pg`, `ChatApp`, `admin`). Refer to `.env.example` in each directory for required variables.
-
----
-
-## 🛠 Built With
-
-* [React Native](https://reactnative.dev/) & [Expo](https://expo.dev/)
-* [Next.js](https://nextjs.org/)
-* [Node.js](https://nodejs.org/) & [Express](https://expressjs.com/)
-* [PostgreSQL](https://www.postgresql.org/)
-* [Socket.io](https://socket.io/)
+- **Frontend:** React Native, Expo, Next.js, React
+- **Backend:** Node.js, Express, Socket.io
+- **Database:** PostgreSQL
+- **Deployment:** Vercel (Admin), Render (Backend)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is proprietary. Please contact the repository owner for licensing details.
