@@ -6,10 +6,10 @@ import { radii, spacing } from '../theme/blushDusk';
 import { useTheme } from '../theme/ThemeContext';
 
 export default function LoginScreen({ navigation }) {
-    const { colors: themeColors, isDark, toggleTheme } = useTheme();
+  const { colors: themeColors, isDark, toggleTheme } = useTheme();
   colors = themeColors;
   styles = getStyles(colors);
-const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPass, setShowPass] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -59,8 +59,8 @@ const [email, setEmail] = useState('');
             </View>
           </View>
 
-          <TouchableOpacity 
-            style={[styles.button, loading && { opacity: 0.8 }]} 
+          <TouchableOpacity
+            style={[styles.button, loading && { opacity: 0.8 }]}
             onPress={async () => {
               if (!email || !password) {
                 alert('Please enter both email and password');
@@ -74,7 +74,7 @@ const [email, setEmail] = useState('');
               } finally {
                 setLoading(false);
               }
-            }} 
+            }}
             activeOpacity={0.85}
             disabled={loading}
           >

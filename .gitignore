@@ -30,10 +30,22 @@ backend/extract.js
 web/combined_codebase.txt
 web/extract.js
 
-
 **/combined_codebase.txt
 **/extract.js
 .superpowers/
 # Security: ignore env and node_modules
 .env*
 **/.env*
+
+# Ignore random screenshots and test images in the root or general dirs
+*.jpg
+*.jpeg
+*.png
+*.pdf
+*.pptx
+!ChatApp/assets/**/*.png
+!ChatApp/assets/**/*.jpg
+!ChatApp/assets/**/*.jpeg
+!admin/public/**/*.png
+!admin/public/**/*.jpg
+!admin/public/**/*.jpeg

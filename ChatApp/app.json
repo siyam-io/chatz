@@ -33,7 +33,7 @@
         {
           "android": {
             "usesCleartextTraffic": true,
-            "softwareKeyboardLayoutMode": "adjustResize"
+            "softwareKeyboardLayoutMode": "adjustPan"
           }
         }
       ]

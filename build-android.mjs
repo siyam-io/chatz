@@ -123,6 +123,11 @@ const build = async () => {
 
     // 1. Generate Android Directory
     console.log('\n--- Running Expo Prebuild ---');
+    // Force set .env to Production deployed server before prebuild
+    const envPath = path.join(chatAppDir, '.env');
+    fs.writeFileSync(envPath, 'EXPO_PUBLIC_API_URL=https://chaz-backend.onrender.com\n');
+    console.log('📝 Forced Production API URL in ChatApp/.env before building');
+
     await runCommand('npx', ['expo', 'prebuild', '--platform', 'android'], chatAppDir);
 
     // Configure Android SDK path and local.properties

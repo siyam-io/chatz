@@ -304,8 +304,8 @@ const { userId: partnerId, userName } = route.params;
       ) : (
         <KeyboardAvoidingView
           style={styles.container}
-          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-          keyboardVerticalOffset={Platform.OS === 'ios' ? (headerHeight > 0 ? headerHeight : 90) : 0}
+          behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
+          keyboardVerticalOffset={Platform.OS === 'ios' ? (headerHeight > 0 ? headerHeight : 90) : (headerHeight > 0 ? headerHeight + 25 : 80)}
         >
           {ChatContent}
         </KeyboardAvoidingView>

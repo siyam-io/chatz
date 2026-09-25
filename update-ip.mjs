@@ -23,8 +23,9 @@ const updateEnv = () => {
     const envPath = path.join(__dirname, 'ChatApp', '.env');
     const envKey = 'EXPO_PUBLIC_API_URL';
     const isPg = process.argv.includes('--pg');
+    const isProd = process.argv.includes('--prod');
     const port = isPg ? '5002' : '5001';
-    const envValue = `http://${ip}:${port}`;
+    const envValue = isProd ? 'https://chaz-backend.onrender.com' : `http://${ip}:${port}`;
 
     try {
         let content = '';
